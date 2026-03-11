@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+/* Page background */
+html,
+body {
+  background-color: #000;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 10px;
+}
+
+/* Fix Chrome autofill issue */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: white !important;
+  -webkit-box-shadow: 0 0 0px 1000px #27272a inset !important;
+  border: 1px solid #3f3f46 !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Google Places dropdown */
+.pac-container {
+  border-radius: 8px;
+  margin-top: 5px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  border: none;
+  font-family: inherit;
+  z-index: 9999;
+}
+
+/* Map styling */
+.leaflet-container {
+  height: 100vh;
+  width: 100%;
+  z-index: 0;
+}
+
+/* Ensure UI overlays appear above map */
+.z-20 {
+  z-index: 20;
+}
+
+/* Move Leaflet zoom controls to the right of the sidebar */
+.leaflet-left .leaflet-control {
+  margin-left: 10px !important; /* Adjust this based on your sidebar width */
+  margin-top: 20px !important;
+}
+
+/* Make the buttons look professional and high-contrast */
+.leaflet-bar a {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #ccc !important;
+  width: 34px !important;
+  height: 34px !important;
+  line-height: 34px !important;
+  font-size: 18px !important;
+  font-weight: bold !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+}
+
+.leaflet-bar a:hover {
+  background-color: #f4f4f4 !important;
+}
+
+/* Ensure they stay above the map but below your search panel if needed */
+.leaflet-control-container {
+  position: relative;
+  z-index: 500;
+}
