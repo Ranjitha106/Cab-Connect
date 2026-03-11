@@ -9,7 +9,7 @@ export const SocketProvider = ({ children }) => {
 
   useEffect(() => {
     // Connect to your Node.js backend
-    const newSocket = io('http://localhost:5000');
+    const newSocket = io('https://cab-connect-bj6l.onrender.com');
     setSocket(newSocket);
 
     return () => newSocket.close();
