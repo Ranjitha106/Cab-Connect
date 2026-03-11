@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { useSocket } from '../context/SocketContext';
-import Sidebar from '../components/Sidebar';
+import { useSocket } from '../../context/SocketContext';
+import Sidebar from '../../components/Sidebar';
 
 export default function DriverPage() {
   const socket = useSocket();
